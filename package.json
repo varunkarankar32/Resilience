@@ -1,0 +1,30 @@
+{
+  "name": "resilience-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ResilienceAI — Event-Driven SRE Incident Commander",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rimraf node_modules packages/*/node_modules",
+    "docker:up": "docker compose -f docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker-compose.yml down",
+    "docker:logs": "docker compose -f docker-compose.yml logs -f",
+    "setup": "npm install && npm run docker:up",
+    "postinstall": "cd packages/agent-engine && python -m venv .venv 2>/dev/null || true"
+  },
+  "workspaces": [
+    "packages/webhooks-gateway",
+    "packages/dashboard"
+  ],
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "rimraf": "^6.0.1"
+  },
+  "packageManager": "npm@10.9.0",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

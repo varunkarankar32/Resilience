@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Docker volumes
+mongo_data/
+redis_data/
+qdrant_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+log.txt
+
+# Turbo
+.turbo/
+
+# LaTeX artifacts
+docs/**/*.aux
+docs/**/*.log
+docs/**/*.out
+docs/**/*.toc
+docs/**/*.pdf
+
+# Uploads / runtime data
+uploads/
+tmp/
+temp/

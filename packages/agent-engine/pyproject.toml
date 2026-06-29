@@ -1,0 +1,8 @@
+[project]
+name = "resilience-ai-agent-engine"
+version = "1.0.0"
+description = "LLM-powered SRE incident diagnosis engine with LangGraph"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["app"]
